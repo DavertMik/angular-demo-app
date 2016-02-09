@@ -269,9 +269,8 @@ angular
         controllerAs: 'vm'
       })
       .when('/info', {
-        templateUrl: 'views/info.html'
-        // ,
-        // controller: 'MainCtrl',
+        templateUrl: 'views/info.html',
+        controller: 'MainCtrl'
         // controllerAs: 'main'
       })
       .otherwise({

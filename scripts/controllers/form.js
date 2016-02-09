@@ -149,15 +149,15 @@ angular.module('testAppJsonApp')
     ];
 
     function SimplePost() {
-       $timeout(function() {
-         $location.path('/result');
+      vm.wait = 'Please wait';
 
+      $timeout(function() {
+         $location.path('/result');
       }, 2000);
     }
 
     function SimpleDelete() {
       //$http.delete('url');
     }
-    vm.text = 'this is test';
     vm.fields = myConfig;
   });
