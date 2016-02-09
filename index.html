@@ -29,7 +29,7 @@
   </div>
 
   <script type="text/ng-template" id="number.html">
-    <div ckeditor="options" ng-model="content" ready="onReady()"></div>
+    <div ckeditor="options" ng-model="model[options.key]" name="{{::id}}" ready="onReady()"></div>
   </script>
   <script type="text/ng-template" id="datepicker.html">
         <p class="input-group">
@@ -43,13 +43,10 @@
                   is-open="datepicker.opened"
                   datepicker-options="to.datepickerOptions" />
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default" ng-click="datepicker.open($event)" ng-disabled="to.disabled"><i class="glyphicon glyphicon-calendar"></i></button>
+              <button type="button" class="btn btn-default lc-datepicker" ng-click="datepicker.open($event)" ng-disabled="to.disabled"><i class="glyphicon glyphicon-calendar"></i></button>
           </span>
         </p>
       </script>
-  <script type="text/ng-template" id="editor.html">
-  <div ui-ace></div>
-  </script>
   <script src="//rawgit.com/kentcdodds/api-check/latest/dist/api-check.js"></script>
 
   <!-- build:js(.) scripts/vendor.js -->

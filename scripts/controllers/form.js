@@ -47,7 +47,6 @@ angular.module('testAppJsonApp')
         }, {
           key: 'htmldesc',
           type: 'custom',
-          noFormControl: true,
           templateOptions: {
             label: 'HTML Description'
           }
@@ -153,7 +152,6 @@ angular.module('testAppJsonApp')
       formResult.resultSave(vm.model);
       $timeout(function() {
          $location.path('/result');
-         $scope.result = vm.model;
       }, 2000);
     }
 
