@@ -150,7 +150,7 @@ angular.module('testAppJsonApp')
 
     function SimplePost() {
        $timeout(function() {
-         $location.path('/simple');
+         $location.path('/result');
 
       }, 2000);
     }
