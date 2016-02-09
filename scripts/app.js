@@ -120,11 +120,11 @@ angular
     .run(function(formlyConfig, appApiCheck) {
       formlyConfig.setType({
         name: 'btnPOST',
-        template: '<div><a class="btn btn-{{::to.btnType}}" ng-click="onClick()">Post button</a></div>',
+        template: '<div><a class="btn btn-{{::to.btnType}}" ng-click="onClick()">Submit</a></div>',
         wrapper: ['bootstrapLabel'],
         defaultOptions: {
           templateOptions: {
-            btnType: 'default',
+            btnType: 'primary',
             type: 'btnPOST'
           },
           extras: {
