@@ -223,8 +223,6 @@ angular
       ngModelAttrs[camelize(binding)] = {bound: binding};
     });
 
-    console.log(ngModelAttrs);
-
     formlyConfig.setType({
       name: 'datepicker',
       templateUrl:  'datepicker.html',
@@ -261,7 +259,6 @@ angular
   })
 
   .config(function ($routeProvider,$locationProvider) {
-    $locationProvider.html5Mode(false);
     $routeProvider
       .when('/',{
         template: '<div class="container"><custom-form></custom-form></div>'
