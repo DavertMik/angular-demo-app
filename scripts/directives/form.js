@@ -7,7 +7,7 @@
  * # form
  */
 angular.module('testAppJsonApp')
-  .directive('customForm', function () {
+  .directive('customForm', function ($rootScope) {
     return {
       templateUrl: 'views/form.html',
       restrict: 'E',

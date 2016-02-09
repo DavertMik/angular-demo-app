@@ -8,13 +8,13 @@
  * Controller of the testAppJsonApp
  */
 angular.module('testAppJsonApp')
-  .controller('FormCtrl', function($location, $timeout, $scope, $cookies) {
+  .controller('FormCtrl', function($location, $timeout, $scope, $cookies, formResult) {
     var vm = this;
     vm.model = {};
 
     vm.options = {};
     vm.htmlEditor = '...';
-    var myConfig = [, {
+    var myConfig = [{
         key: 'name',
         type: 'input',
         templateOptions: {
@@ -150,9 +150,10 @@ angular.module('testAppJsonApp')
 
     function SimplePost() {
       vm.wait = 'Please wait';
-
+      formResult.resultSave(vm.model);
       $timeout(function() {
          $location.path('/result');
+         $scope.result = vm.model;
       }, 2000);
     }
 
@@ -160,4 +161,7 @@ angular.module('testAppJsonApp')
       //$http.delete('url');
     }
     vm.fields = myConfig;
+    vm.result = formResult.load();
+
+
   });
