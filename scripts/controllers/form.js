@@ -59,10 +59,12 @@ angular.module('testAppJsonApp')
           label: 'Interesting for',
           options: [{
             id: 'developers',
+            name: '1112',
             title: "Web-Developers"
           }, {
             id: 'designers',
-            title: "Designers"
+            title: "Designers",
+            name: 'designers'
           }],
           valueProp: 'id',
           labelProp: 'title'

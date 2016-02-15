@@ -271,7 +271,10 @@ angular
       .when('/info', {
         templateUrl: 'views/info.html',
         controller: 'MainCtrl'
-        // controllerAs: 'main'
+      })
+      .when('/options', {
+        templateUrl: 'views/options.html',
+        controller: 'OptionsCtrl'
       })
       .otherwise({
         redirectTo: '/'
