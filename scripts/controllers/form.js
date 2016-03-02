@@ -12,6 +12,10 @@ angular.module('testAppJsonApp')
     var vm = this;
     vm.model = {};
 
+    vm.getOpts = function() {
+      $location.path('/options');
+    }
+
     vm.options = {};
     vm.htmlEditor = '...';
     var myConfig = [{
